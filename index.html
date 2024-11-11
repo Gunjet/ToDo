@@ -1,69 +1,63 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todos</title>
-    <style>
-        .task{
-            border: 1px solid gray;
-            padding:1-px;
-            border-radius: 4px;
-            margin-bottom: 3px
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todos</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <!-- <div>Hello</div>
 
-    <button onclick="sayHello()">Say hello</button>
-    <button onclick="printName()">PRINT NAME</button>
-    <button onclick="deleteName()">DELETE NAME</button>
-    <button onclick="getName()">GET NAME</button>
-    <div id="area"></div>
+<body class="body">
+    <div class="container">
+        <h1>To do</h1>
+        <button onclick="addTodo()">Add your task</button>
+        <div id="tasks"></div>
+    </div>
 
-    <div id="name-container" style="font-size: large; color:blue"></div> -->
-    <button onclick="addTask">Add</button>
-    <div id="tasks"></div>
 
-    <script>
-        // function sayHello(){
-        //     alert("Hello World!");
-        // }
-        // function getName(){
-        //     let namecontainer=prompt("")
-        //     document.getElementById("area").textContent = namecontainer
-        // }
-        // function printName(){
-        //     const nameContainerElement=document.getElementById("name-container");
-        //     nameContainerElement.innerText="John Doe";
-        // }
-        // function deleteName(){
-        //     let dissapear = "";
-        //     const nameContainerElement=document.getElementById("name-container");
-        //     nameContainerElement.innerText="";
-        //     document.getElementById("area").innerHTML = dissapear;
-        // }
+  <script src="todo.js" class="todos">
 
-        const tasks=[
-            {name:"Shalaa ugaah", status:"todo"},
-            {name:"Huvtsas ugaah", status:"todo"},
-            {name:"Duugee ugaah", status:"todo"}
-        ];
+    
+//    const tasks=[
+//     {name:'shalaa ugaah', status:'todo'},
+//     {name:'hivsee ugaah', status:'todo'},
+//     {name:'duuge harah', status:'todo'}
+//   ];
+//   function render(){
+//     const output=document.getElementById('tasks');
+//     output.innerHTML="";
+//     for (let i=0; i<tasks.length; i++){
+//       output.innerHTML +='<div class="task">' + tasks[i].name + '</div>';
+//     }
+//   }
 
-        function render(){
-            const output=document.getElementById("tasks");
-            output.innerHTML="";
-            for (let i=0; i<tasks.length; i++){
-            output.innerHTML+='<div class="task">' +tasks[i].name+"</div>";
-            }
-        }
-        function addTask(){
-            const name=prompt();
-            tasks.push({name:name,status:"todo"});
-            render();
-        }
-        render();
-    </script>
+//   function addTask(){
+//     const name=prompt();
+//     tasks.push({name: name, status:"todo"});
+//     render()
+//   }
+
+
+//   function editStatus(index,status){
+//     let item=tasks[index];
+//     item.status=status
+//   }
+
+//   function editName(){
+//   }
+
+//   function deleteTask(index){
+//     let arr=[];
+//     for (let i=0; i<tasks.length; i++){
+//       if (i !==index){
+//         arr.push(tasks[i])
+//       }
+//     }
+//   }
+
+//   render()
+</script>
+
 </body>
 </html>
