@@ -24,14 +24,15 @@
 .container{
   background-color: #101010;
   color: white;
-  width: 20vw;
-  height: 84vh;
+  width: 16vw;
+  height: 73vh;
   margin-left:auto;
   margin-right: auto;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
-  padding: 2%
+  padding: 2%;
+  margin-top: 8%
 }
 .items-top{
 /* background-color: green; */
@@ -50,4 +51,9 @@ gap: 5%
   height: 33%;
   background-color: yellow;
   border-radius: 50%;
+}
+.c{
+  gap: 1%;
+  display: flex;
+
 }
