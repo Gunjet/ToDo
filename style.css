@@ -1,24 +1,118 @@
 .task{
-    border: 1px solid gray;
-    border-radius: 4px;
-    margin-bottom: 3px
+  border: 1px solid gray;
+  border-radius: 4px;
+  margin-bottom: 3px
 } 
-*{
-    font-family: "Inter", sans-serif;
+.body{
+  background-color: #1b1b1b
 }
- .todo-item{
-    display: flex
+*{
+  font-family: "Inter", sans-serif;
+}
+.todo-item{
+  display: flex
+}
+.title{
+  /* font-size: 50px */
+  font-size: 1.8em
 }
 .status-todo{
-    background-color: green;
-    border-radius: 6px;
-    padding: 4px
+  background-color: green;
+  border-radius: 6px;
+  padding: 4px
 } 
 .container{
-    background-color: black;
-    color: white;
-    width: 280px;
-    height: 672px;
-    margin-left:auto;
-    margin-right: auto;
+  background-color: #101010;
+  color: white;
+  width: 16vw;
+  height: 73vh;
+  margin-left:auto;
+  margin-right: auto;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 2%;
+  margin-top: 8%;
+  border: 1px solid rgb(63, 63, 63)
+}
+.items-top{
+/* background-color: green; */
+width: 80%;
+height: 5%;
+display: flex;
+flex-direction: row;
+align-items: center;
+gap: 5%
+}
+.items-bottom{
+
+}
+.circle-yellow{
+  width: 7%;
+  height: 45%;
+  background-color: yellow;
+  border-radius: 50%;
+}
+.circle-white{
+  width: 7%;
+  height: 45%;
+  background-color: white;
+  border-radius: 50%;
+}
+.circle-green{
+  width: 7%;
+  height: 45%;
+  background-color: green;
+  border-radius: 50%;
+}
+.circle-red{
+  width: 7%;
+  height: 45%;
+  background-color: red;
+  border-radius: 50%;
+}
+.c{
+  display: flex;
+  width: 90vw;
+  height:73vh;
+  margin-right: auto;
+  margin-left: auto;
+  /* background-color: red; */
+}
+.button{
+  background-color: #00A300;
+  color: white;
+  border:none;
+  padding: 15px 20px 15px 20px;
+  font-size: 1.3rem;
+  border-radius: 5px;
+}
+#modal{
+  position: fixed;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  background-color: rgba(0,0,0,0.4);
+  z-index:3;
+  color: white;
+  display: none
+}
+.modal-open{
+  display: block
+}
+.modal-content{
+  background-color: #1e1e1e;
+  margin: 100px auto;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  padding: 12px;
+
+}
+.modal-content > input{
+  padding: 6px
 }

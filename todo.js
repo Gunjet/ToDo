@@ -114,7 +114,16 @@ function render(){
 }
 
 function addTodo(){
-    const input=prompt("Enter todo name");
-    addOne({name: input, status:"TODO"});
-    render();
+    const modal=document.querySelector("#modal")
+    modal.style.display = "block";
+
+    // const input=prompt("Enter todo name");
+    // addOne({name: input, status:"TODO"});
+    // render();
 }
+function saveTodo(){
+    const input=document.getElementById("task-name")
+    console.log(input)
+}
+
+
