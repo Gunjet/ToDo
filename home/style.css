@@ -30,7 +30,6 @@
   margin-right: auto;
   border-radius: 20px;
   display: flex;
-  justify-content:  center;
   flex-direction: column;
   padding: 2%
 }
@@ -41,4 +40,10 @@ height: 5%;
 }
 .items-bottom{
 
+}
+.circle{
+  width: 10%;
+  height: 20%;
+  background-color: yellow;
+  border-radius: 16%;
 }
