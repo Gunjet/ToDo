@@ -14,7 +14,7 @@
 }
 .title{
   /* font-size: 50px */
-  font-size: 3em
+  font-size: 2.5em
 }
 .status-todo{
   background-color: green;
@@ -34,16 +34,20 @@
   padding: 2%
 }
 .items-top{
-background-color: green;
+/* background-color: green; */
 width: 80%;
 height: 5%;
+display: flex;
+flex-direction: row;
+align-items: center;
+gap: 5%
 }
 .items-bottom{
 
 }
 .circle{
-  width: 10%;
-  height: 20%;
+  width: 5%;
+  height: 33%;
   background-color: yellow;
-  border-radius: 16%;
+  border-radius: 50%;
 }
