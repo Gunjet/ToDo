@@ -1,4 +1,8 @@
-let todos=[]
+let todos=[];
+let blocked=[];
+let inprogress=[];
+let done=[]
+
 
 // Todo add
 function addOne(newTodo){
@@ -78,14 +82,22 @@ function deleteOne(index){
 //   render()
 
 
+function renderOneList(){
+
+}
 
 function render(){
-    const todoList=document.querySelector("#tasks");
-    todoList.innerHTML="";
 
-    console.log(todoList);
+
+    // console.log(taskList);
 
     for(let i=0; i<todos.length; i++){
+        const containerName = todos[i].status;
+        const todoList=document.getElementById(containerName);
+
+        const taskList=todoList.querySelector("#tasks");
+
+        taskList.innerHTML="";
         const item=todos[i];
 
         // create task item
@@ -102,14 +114,21 @@ function render(){
         btnEl.onclick=function(){
             const newName=prompt("Enter new name");
             editName(i, newName);
-            render();
+            // render();
         };
 
         // delete
+        const deleteBtn=document.createElement("button");
+        deleteBtn.innetText="Delete";
+        deleteBtn.onclick=function(){
+            deleteOne[i]
+        }
+
         element.appendChild(titleEl);
         element.appendChild(btnEl);
+        element.appendChild(deleteBtn);
 
-        todoList.appendChild(element)
+        taskList.appendChild(element)
     }
 }
 
@@ -122,8 +141,15 @@ function addTodo(){
     // render();
 }
 function saveTodo(){
-    const input=document.getElementById("task-name")
-    console.log(input)
+    const inputValue = document.getElementById("task-name").value;
+    const statusValue = document.getElementById("task-status").value
+    todos.push({
+        name:inputValue,
+        status: statusValue
+    })
+    const modal=document.querySelector("#modal")
+    modal.style.display = "none";
+    render()
 }
 
 

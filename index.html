@@ -14,39 +14,43 @@
 <div class="c">
   <div class="button-container">
     <button onclick="addTodo()" class="button">Add task</button>
-    <div id="tasks"></div>
+
   </div>
 
-  <div class="container">
-    <div class="items-top">
+<div id="todo" class="todos">
+    <div class="t">
       <div class="circle-white"></div>
       <h1 class="title">To do</h1>
+      <div id="tasks"></div>
     </div>
 </div>
 
-  <div class="container">
-    <div class="items-top">
+  <div id="in-progress" class="todos">
+    <div class="t">
       <div class="circle-yellow"></div>
       <h1 class="title">In progress</h1>
+      <div id="tasks"></div>
     </div>
 </div>
 
-<div class="container">
-  <div class="items-top">
+<div id="done" class="todos">
+  <div class="t">
     <div class="circle-green"></div>
     <h1 class="title">Done</h1>
+    <div id="tasks"></div>
   </div>
 </div>
 
-<div class="container">
-  <div class="items-top">
+<div id="blocked" class="todos">
+  <div class="t">
     <div class="circle-red"></div>
     <h1 class="title">Blocked</h1>
+    <div id="tasks"></div>
   </div>
 </div>
 
 </div>
-
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
 <div id="modal">
   <div class="modal-content">
     <h2>Enter task</h2>
@@ -62,7 +66,7 @@
   </div>
 </div>
 
-  <script src="todo.js" class="todos">
+  <script src="todo.js">
 
     
 //    const tasks=[
