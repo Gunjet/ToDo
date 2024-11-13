@@ -1,7 +1,7 @@
 .task{
   border: 1px solid gray;
   border-radius: 4px;
-  margin-bottom: 3px
+  margin-bottom: 3px;
 } 
 .body{
   background-color: #1b1b1b
@@ -10,11 +10,17 @@
   font-family: "Inter", sans-serif;
 }
 .todo-item{
-  display: flex
+  display: flex;
+  width:16vw;
+  height:6vh;
+  border-radius: 0.6vh;
+  background: #1A1A1A;
+  color:#D9D9D9;
+  margin-bottom:1vh;
+  justify-content: space-between;
 }
 .title{
-  /* font-size: 50px */
-  font-size: 1.8em
+  font-size: 1.8em;
 }
 .status-todo{
   background-color: green;
@@ -30,59 +36,66 @@
   margin-right: auto;
   border-radius: 20px;
   padding: 2%;
-  display: flex;
-  flex-direction:column;
   margin-top: 8%;
-  border: 1px solid rgb(63, 63, 63)
+  border: 1px solid rgb(63, 63, 63);
+  flex-direction: column
 }
 .t{
-/* background-color: green; */
 width: 80%;
 height: 5%;
 display: flex;
 flex-direction: row;
 align-items: center;
-gap: 5%
+gap: 5%;
+margin-bottom:3.5vh;
 }
 .circle-yellow{
-  width: 7%;
-  height: 45%;
+  width: 5.5%;
+  height: 36%;
   background-color: yellow;
   border-radius: 50%;
 }
 .circle-white{
-  width: 7%;
-  height: 45%;
+  width: 5.5%;
+  height: 36%;
   background-color: white;
   border-radius: 50%;
 }
 .circle-green{
-  width: 7%;
-  height: 45%;
+  width: 5.5%;
+  height: 36%;
   background-color: green;
   border-radius: 50%;
 }
 .circle-red{
-  width: 7%;
-  height: 45%;
+  width: 5.5%;
+  height: 36%;
   background-color: red;
   border-radius: 50%;
 }
 .c{
   display: flex;
   width: 90vw;
-  height:73vh;
+  justify-content: center;
+  margin-top: 1%;
   margin-right: auto;
   margin-left: auto;
-  /* background-color: red; */
+  position:relative
 }
 .button{
   background-color: #00A300;
   color: white;
   border:none;
-  padding: 15px 20px 15px 20px;
-  font-size: 1.3rem;
+  padding: 15px 30px 15px 30px;
+  font-size: 1%;
   border-radius: 5px;
+  cursor: pointer;
+  font-size: 2rem
+}
+.button-container{
+  position: absolute;
+  top:40px;
+  right:50px
 }
 #modal{
   position: fixed;
@@ -90,7 +103,7 @@ gap: 5%
   bottom:0;
   left:0;
   right:0;
-  background-color: rgba(0,0,0,0.4);
+  background: #1A1A1AB2;
   z-index:3;
   color: white;
   display: none
@@ -99,16 +112,53 @@ gap: 5%
   display: block
 }
 .modal-content{
-  background-color: #1e1e1e;
-  margin: 100px auto;
-  width: 40%;
+  background-color:#1E1E1E;
+  margin:25vh auto;
+  width: 16vw;
+  height: 20vw;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  border-radius: 0.9vw;
+  padding-left: 2.6%;
+  padding-right: 2.6%;
+  padding-top:2%
+}
+.title2{
+  font-size: 2rem;
+}
+.modal-top{
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  border-radius: 16px;
-  padding: 12px;
 }
 .modal-content > input{
   padding: 6px
+}
+#task-name{
+  background-color:#1E1E1E;
+  border:1px solid  rgb(166, 166, 166);
+  margin-bottom: 2vh;
+  height:2.5vw;
+  border-radius: 0.2vw;
+  font-size: 0.9vw;
+  padding-left: 10px;
+  color: white
+}
+#task-status{
+  height:2.5vw;
+  border-radius: 0.2vw;
+  background: none;
+  color: rgba(255, 255, 255, 0.312);
+  border:1px solid  rgb(166, 166, 166);
+  font-size: 0.9vw;
+  padding: 10px
+}
+.submit{
+  height:2.5vw;
+  border-radius: 0.2vw;
+  background-color: #00A300;
+  color: white;
+  border: none;
+  margin-top: 11vh;
+  font-size: 1.2rem
 }

@@ -1,33 +1,31 @@
-let todos=[];
-let blocked=[];
-let inprogress=[];
-let done=[]
-
+let todos = [];
+let blocked = [];
+let inprogress = [];
+let done = [];
 
 // Todo add
-function addOne(newTodo){
-    todos.push(newTodo)
+function addOne(newTodo) {
+  todos.push(newTodo);
 }
 
 // Status uurchluh
-function editStatus(index,status){
-    let item=todos[index];
-    item.status=status;
+function editStatus(index, status) {
+  let item = todos[index];
+  item.status = status;
 }
 
 // Ner uurchluh
-function editName(index,name){
-    let item=todos[index];
-    item.name=name;
+function editName(index, name) {
+  let item = todos[index];
+  item.name = name;
 }
 
 // Todo delete one item
-function deleteOne(index){
-    todos.splice(index, 1)
-
+function deleteOne(index) {
+  todos.splice(index, 1);
 }
 
-// RUNNING APLICATION 
+// RUNNING APLICATION
 //     addOne({name:'Hool hiih', status:'TODO'}),
 //     addOne({name:'JS sudlah', status:'TODO'}),
 //     addOne({name:'Hool hiih', status:'TODO'})
@@ -39,9 +37,6 @@ function deleteOne(index){
 // console.log(todos)
 // deleteOne(0)
 // console.log(todos)
-
-
-
 
 // const tasks=[
 //     {name:'shalaa ugaah', status:'todo'},
@@ -81,75 +76,72 @@ function deleteOne(index){
 
 //   render()
 
+function renderOneList() {}
 
-function renderOneList(){
+function render() {
+  // console.log(taskList);
 
+  for (let i = 0; i < todos.length; i++) {
+    const containerName = todos[i].status;
+    const todoList = document.getElementById(containerName);
+
+    const taskList = document.querySelector("#tasks");
+
+    taskList.innerHTML = "";
+    const item = todos[i];
+
+    // create task item
+    const x = document.createElement("input");
+    x.setAttribute("type", "radio");
+    x.classList.add("input");
+
+    const element = document.createElement("div");
+    element.classList.add("todo-item");
+
+    // create task name
+    const titleEl = document.createElement("p");
+    titleEl.innerText = item.name;
+
+    // create edit button
+    const btnEl = document.createElement("button");
+    btnEl.innerText = "Edit";
+    btnEl.onclick = function () {
+      const newName = prompt("Enter new name");
+      editName(i, newName);
+      render();
+    };
+
+    // delete
+    const deleteBtn = document.createElement("button");
+    deleteBtn.innetText = "Delete";
+    deleteBtn.onclick = function () {
+      deleteOne[i];
+    };
+
+    element.appendChild(x)
+    element.appendChild(titleEl);
+    element.appendChild(btnEl);
+    element.appendChild(deleteBtn);
+
+    taskList.appendChild(element);
+    todoList.appendChild(taskList);
+    console.log(todos);
+  }
 }
 
-function render(){
+function addTodo() {
+  const modal = document.querySelector("#modal");
+  modal.style.display = "block";
 
-
-    // console.log(taskList);
-
-    for(let i=0; i<todos.length; i++){
-        const containerName = todos[i].status;
-        const todoList=document.getElementById(containerName);
-
-        const taskList=todoList.querySelector("#tasks");
-
-        taskList.innerHTML="";
-        const item=todos[i];
-
-        // create task item
-        const element=document.createElement("div")
-        element.classList.add("todo-item");
-
-        // create task name
-        const titleEl=document.createElement("p");
-        titleEl.innerText=item.name;
-
-        // create edit button
-        const btnEl=document.createElement("button")
-        btnEl.innerText="Edit";
-        btnEl.onclick=function(){
-            const newName=prompt("Enter new name");
-            editName(i, newName);
-            // render();
-        };
-
-        // delete
-        const deleteBtn=document.createElement("button");
-        deleteBtn.innetText="Delete";
-        deleteBtn.onclick=function(){
-            deleteOne[i]
-        }
-
-        element.appendChild(titleEl);
-        element.appendChild(btnEl);
-        element.appendChild(deleteBtn);
-
-        taskList.appendChild(element)
-    }
 }
-
-function addTodo(){
-    const modal=document.querySelector("#modal")
-    modal.style.display = "block";
-
-    // const input=prompt("Enter todo name");
-    // addOne({name: input, status:"TODO"});
-    // render();
+function saveTodo() {
+  const inputValue = document.getElementById("task-name").value;
+  const statusValue = document.getElementById("task-status").value;
+  todos.push({
+    name: inputValue,
+    status: statusValue,
+  });
+  const modal = document.querySelector("#modal");
+  modal.style.display = "none";
+  render();
 }
-function saveTodo(){
-    const inputValue = document.getElementById("task-name").value;
-    const statusValue = document.getElementById("task-status").value
-    todos.push({
-        name:inputValue,
-        status: statusValue
-    })
-    const modal=document.querySelector("#modal")
-    modal.style.display = "none";
-    render()
-}
-
-

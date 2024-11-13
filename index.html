@@ -1,113 +1,68 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Todos</title>
-  <link rel="stylesheet" href="style.css">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todos</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body class="body">
+  <body class="body">
+    <div class="c">
+      <div class="button-container">
+        <button onclick="addTodo()" class="button">Add task</button>
+      </div>
 
-<div class="c">
-  <div class="button-container">
-    <button onclick="addTodo()" class="button">Add task</button>
+      <div id="todo" class="todos">
+        <div class="t">
+          <div class="circle-white"></div>
+          <h1 class="title">To do</h1>
+        </div>
+        <div id="tasks"></div>
+      </div>
 
-  </div>
+      <div id="in-progress" class="todos">
+        <div class="t">
+          <div class="circle-yellow"></div>
+          <h1 class="title">In progress</h1>
+        </div>
+        <div id="tasks"></div>
+      </div>
 
-<div id="todo" class="todos">
-    <div class="t">
-      <div class="circle-white"></div>
-      <h1 class="title">To do</h1>
-      <div id="tasks"></div>
+      <div id="done" class="todos">
+        <div class="t">
+          <div class="circle-green"></div>
+          <h1 class="title">Done</h1>
+        </div>
+        <div id="tasks"></div>
+      </div>
+
+      <div id="blocked" class="todos">
+        <div class="t">
+          <div class="circle-red"></div>
+          <h1 class="title">Blocked</h1>
+        </div>
+        <div id="tasks"></div>
+      </div>
     </div>
-</div>
 
-  <div id="in-progress" class="todos">
-    <div class="t">
-      <div class="circle-yellow"></div>
-      <h1 class="title">In progress</h1>
-      <div id="tasks"></div>
+    <div id="modal">
+      <div class="modal-content">
+        <h1 class="title2">Enter task</h1>
+        <div class="modal-top">
+          <input type="text" id="task-name" placeholder="Task name..." />
+          <select id="task-status" value="todo">
+            <option value="">Select status</option>
+            <option value="todo">Todo</option>
+            <option value="in-progress" >In progress</option>
+            <option value="done">Done</option>
+            <option value="blocked">Blocked</option>
+          </select>
+          <button onclick="saveTodo()" class="submit">Submit</button>
+        </div>
+      </div>
     </div>
-</div>
 
-<div id="done" class="todos">
-  <div class="t">
-    <div class="circle-green"></div>
-    <h1 class="title">Done</h1>
-    <div id="tasks"></div>
-  </div>
-</div>
-
-<div id="blocked" class="todos">
-  <div class="t">
-    <div class="circle-red"></div>
-    <h1 class="title">Blocked</h1>
-    <div id="tasks"></div>
-  </div>
-</div>
-
-</div>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
-<div id="modal">
-  <div class="modal-content">
-    <h2>Enter task</h2>
-    <input type="text" id="task-name">
-
-    <select id="task-status" value="todo">
-      <option value="todo">Todo</option>
-      <option value="in-progress">In progress</option>
-      <option value="done">Done</option>
-      <option value="blocked">Blocked</option>
-    </select>
-    <button onclick="saveTodo()">Add task</button>
-  </div>
-</div>
-
-  <script src="todo.js">
-
-    
-//    const tasks=[
-//     {name:'shalaa ugaah', status:'todo'},
-//     {name:'hivsee ugaah', status:'todo'},
-//     {name:'duuge harah', status:'todo'}
-//   ];
-//   function render(){
-//     const output=document.getElementById('tasks');
-//     output.innerHTML="";
-//     for (let i=0; i<tasks.length; i++){
-//       output.innerHTML +='<div class="task">' + tasks[i].name + '</div>';
-//     }
-//   }
-
-//   function addTask(){
-//     const name=prompt();
-//     tasks.push({name: name, status:"todo"});
-//     render()
-//   }
-
-
-//   function editStatus(index,status){
-//     let item=tasks[index];
-//     item.status=status
-//   }
-
-//   function editName(){
-//   }
-
-//   function deleteTask(index){
-//     let arr=[];
-//     for (let i=0; i<tasks.length; i++){
-//       if (i !==index){
-//         arr.push(tasks[i])
-//       }
-//     }
-//   }
-
-//   render()
-</script>
-
-</body>
+    <script src="todo.js"></script>
+  </body>
 </html>
