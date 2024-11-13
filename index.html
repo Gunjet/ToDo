@@ -18,7 +18,7 @@
           <div class="circle-white"></div>
           <h1 class="title">To do</h1>
         </div>
-        <div id="tasks"></div>
+        <div id="todo-tasks" class="tasks"></div>
       </div>
 
       <div id="in-progress" class="todos">
@@ -26,7 +26,7 @@
           <div class="circle-yellow"></div>
           <h1 class="title">In progress</h1>
         </div>
-        <div id="tasks"></div>
+        <div id="in-progress-tasks" class="tasks"></div>
       </div>
 
       <div id="done" class="todos">
@@ -34,7 +34,7 @@
           <div class="circle-green"></div>
           <h1 class="title">Done</h1>
         </div>
-        <div id="tasks"></div>
+        <div id="done-tasks" class="tasks"></div>
       </div>
 
       <div id="blocked" class="todos">
@@ -42,11 +42,11 @@
           <div class="circle-red"></div>
           <h1 class="title">Blocked</h1>
         </div>
-        <div id="tasks"></div>
+        <div id="blocked-tasks" class="tasks"></div>
       </div>
     </div>
 
-    <div id="modal">
+    <div id="modal" class="modal-open">
       <div class="modal-content">
         <h1 class="title2">Enter task</h1>
         <div class="modal-top">
@@ -58,6 +58,7 @@
             <option value="done">Done</option>
             <option value="blocked">Blocked</option>
           </select>
+          <button id="edit-button" onclick="edit()">Save changes</button>
           <button onclick="saveTodo()" class="submit">Submit</button>
         </div>
       </div>
