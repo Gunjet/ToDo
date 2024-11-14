@@ -12,7 +12,7 @@
 .todo-item{
   display: flex;
   width:16vw;
-  height:6vh;
+  /* height:6vh; */
   border-radius: 0.6vh;
   background: #1A1A1A;
   color:#D9D9D9;
@@ -21,26 +21,46 @@
   align-items: center;
   justify-content: center;
 }
+.task-circle{
+  width: 11px;
+  height: 11px;
+  border-radius:50px;
+  background-color: transparent;
+  border: solid 1px grey;
+}
 .todo-item2{
   width: 14vw;
-  height: 4vh;
+  /* height: 4vh; */
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+.input{
+  width: 6%;
+  height: 36%;
+  cursor: pointer;
+  /* margin-left: 10px */
 }
 .icon{
-  height:20px;
+  height:24px;
+  gap:2px;
 }
 .taskname{
-  display: flex;
-  align-items: center;
+  width: 210px;
+  word-wrap: break-word;
+  overflow-y: hidden;
+  align-content: center;
 }
 .delete-btn{
   background:none;
-  border:none
+  border:none;
+  margin-left: -5px;
+  cursor: pointer;
 }
 .edit-btn{
   background:none;
-  border:none
+  border:none;
+  cursor: pointer;
 }
 .title{
   font-size: 1.8em;
@@ -73,25 +93,25 @@ gap: 5%;
 margin-bottom:3.5vh;
 }
 .circle-yellow{
-  width: 5.5%;
+  width: 6%;
   height: 36%;
   background-color: yellow;
   border-radius: 50%;
 }
 .circle-white{
-  width: 5.5%;
+  width: 6%;
   height: 36%;
   background-color: white;
   border-radius: 50%;
 }
 .circle-green{
-  width: 5.5%;
+  width: 6%;
   height: 36%;
   background-color: green;
   border-radius: 50%;
 }
 .circle-red{
-  width: 5.5%;
+  width: 6%;
   height: 36%;
   background-color: red;
   border-radius: 50%;
