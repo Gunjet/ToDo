@@ -217,3 +217,15 @@ margin-bottom:3.5vh;
   color: white;
   border: none;
 }
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: red; 
+}
