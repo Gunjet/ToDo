@@ -1,8 +1,6 @@
 let todos = [];
 let editIdx = 0;
 
-function renderOneList() {}
-
 function render() {
   document.querySelector("#todo-tasks").innerHTML = "";
   document.querySelector("#in-progress-tasks").innerHTML = "";
@@ -16,30 +14,28 @@ function render() {
     const item = todos[i];
     const taskHTML = `
 <div class="todo-item">
-      <div class="todo-item2">
-      <div style="display: flex; justify-content: start;
-       align-items: center; gap:10px; ">
-        <div class="task-circle"></div>
-        <p class="taskname">${item.name}</p>
-      </div>
-      
-        <div><button class="edit-btn">
-          <img src="edit.png" class="icon">
-        </button>
-        <button class="delete-btn">
-          <img src="delete.png" class="icon">
-        </button></div>
-        
-        </div>
-      </div>
+  <div class="todo-item2">
+    <div style="display: flex; justify-content: start; align-items: center; gap:10px; ">
+      <div class="task-circle"></div>
+      <p class="taskname">${item.name}</p>
+    </div>
+    <div>
+      <button class="edit-btn">
+        <img src="edit.png" class="icon">
+      </button>
+      <button class="delete-btn" data-index="${i}">
+        <img src="delete.png" class="icon">
+      </button>
+    </div>
+  </div>
+</div>
 `;
 
     taskList.innerHTML += taskHTML;
 
-    console.log(todos[i])
-
     const taskElement = taskList.querySelector(".todo-item:last-child");
 
+    // Edit Button handler
     const editBtn = taskElement.querySelector(".edit-btn");
     editBtn.onclick = function () {
       const modal = document.querySelector("#modal");
@@ -51,8 +47,11 @@ function render() {
       editIdx = i;
     };
 
-
-    console.log(todos);
+    // Delete Button handler
+    const deleteBtn = taskElement.querySelector(".delete-btn");
+    deleteBtn.onclick = function () {
+      deleteTask(i);  // Pass index to delete the task
+    };
   }
 }
 
@@ -60,10 +59,12 @@ function deleteTask(index) {
   todos.splice(index, 1);
   render();
 }
+
 function addTodo() {
   const modal = document.querySelector("#modal");
   modal.style.display = "block";
 }
+
 function saveTodo() {
   const inputValue = document.getElementById("task-name").value;
   const statusValue = document.getElementById("task-status").value;
