@@ -46,23 +46,27 @@
       </div>
     </div>
     <div></div>
-    <div id="modal" class="modal-open">
-      <div class="modal-content">
-        <h1 class="title2">Enter task</h1>
-        <div class="modal-top">
-          <input type="text" id="task-name" placeholder="Task name..." />
-          <select id="task-status" value="todo">
-            <option value="">Select status</option>
-            <option value="todo">Todo</option>
-            <option value="in-progress" >In progress</option>
-            <option value="done">Done</option>
-            <option value="blocked">Blocked</option>
-          </select>
-          <button id="edit-button" onclick="edit()">Save changes</button>
-          <button onclick="saveTodo()" class="submit">Submit</button>
-        </div>
-      </div>
+<div id="modal" class="modal-open">
+  <div class="modal-content">
+    <h1 class="title2">Enter task</h1>
+    
+    <button onclick="closeModal()" class="close-btn">X</button>
+    
+    <div class="modal-top">
+      <input type="text" id="task-name" placeholder="Task name..." />
+      <select id="task-status" value="todo">
+        <option value="">Select status</option>
+        <option value="todo">Todo</option>
+        <option value="in-progress">In progress</option>
+        <option value="done">Done</option>
+        <option value="blocked">Blocked</option>
+      </select>
+      <button id="edit-button" onclick="edit()">Save changes</button>
+      <button onclick="saveTodo()" class="submit">Submit</button>
     </div>
+  </div>
+</div>
+
 
     <script src="todo.js"></script>
   </body>
